@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+    }
+
+    /* Navigation bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00aced;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    /* Hover effect */
+    nav ul li a:hover {
+      color: #00aced;
+      border-bottom: 2px solid #00aced;
+      padding-bottom: 3px;
+    }
+
+    /* Landing section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">MyBrand</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Landing Page -->
+  <section class="hero" id="home">
+    <h1>Welcome to My Landing Page</h1>
+    <p>This is a simple responsive landing page with a fixed navigation bar that changes color when you hover over menu items.</p>
+  </section>
+
+  <section class="hero" id="about" style="background:#333;">
+    <h1>About Us</h1>
+    <p>We create beautiful and interactive web solutions for businesses and individuals.</p>
+  </section>
+
+  <section class="hero" id="services" style="background:#444;">
+    <h1>Services</h1>
+    <p>Our services include Web Design, Development, and Digital Marketing.</p>
+  </section>
+
+  <section class="hero" id="contact" style="background:#555;">
+    <h1>Contact Us</h1>
+    <p>Get in touch via email or phone for collaboration and projects.</p>
+  </section>
+
+</body>
+</html>
